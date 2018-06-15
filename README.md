@@ -1,4 +1,3 @@
-# poject-1-group-4
 # VACATION PLANNER
 GM: Brad Said
 PM: Brian Phan
