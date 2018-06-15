@@ -13,7 +13,8 @@ Search flights & hotels for a given destination.
 4) Display hotel & flight options to the user.
 5) Use video.js to embed desintation themed videos
 
-New Library : Materialize
+New Library : Video.js
+
 
 BONUS API's - WISHLIST
 Weather for the destination 
