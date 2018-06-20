@@ -1,4 +1,4 @@
-$("#submit").on("click", function(event) {
+$("#add-destination").on("click", function(event) {
     event.preventDefault();
     $("#images-view").empty();
     var API_KEY = '9335517-b03c3ef104729c3975acac324';
