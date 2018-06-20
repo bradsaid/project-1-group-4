@@ -1,0 +1,14 @@
+.jumbotron {
+    background-color: aqua;
+    color: aliceblue;
+    font-family: fantasy;
+}
+
+aside {
+    background: #ebebeb;
+    width: 33%;
+    height: 260px;
+    padding: 20px;
+    float: right;
+    text-align: center;
+}
