@@ -17,6 +17,6 @@ New Library : Video.js
 
 
 BONUS API's - WISHLIST
-Google Maps API
-WeatherUnderground API
-State Department API for travel advisories 
+
+1. WeatherUnderground API
+1. State Department API for travel advisories 
