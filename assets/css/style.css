@@ -6,10 +6,11 @@
 
 aside {
     background: #ebebeb;
-    width: 33%;
-    height: 260px;
+    width: 33.3%;
+    height: 300px;
     padding: 20px;
     float: right;
     text-align: center;
+    overflow: scroll;
 }
 
