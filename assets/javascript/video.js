@@ -13,5 +13,8 @@ $("#add-destination").on("click", function (event) {
         console.log(response)
         var videoID = response.items[0].id.videoId;
         console.log(videoID);
+        var videoURL = "https://www.youtube.com/embed/" + videoID +"?autoplay=1";
+        console.log(videoURL)
+        $("#video").append('<iframe width="420" height="315" src="' + videoURL + '"></iframe>');
     }); 
 });
