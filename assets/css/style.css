@@ -16,5 +16,6 @@ aside {
     float: right;
     text-align: center;
     overflow: scroll;
+    opacity: 0.8;
 }
 
