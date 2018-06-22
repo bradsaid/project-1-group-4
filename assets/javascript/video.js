@@ -15,7 +15,7 @@ $("#add-destination").on("click", function(event) {
         console.log(videoID);
         var videoURL = "https://www.youtube.com/embed/" + videoID +"?autoplay=1";
         console.log(videoURL)
-        $("#video").html('<iframe width="420" height="315" src="' + videoURL + '"></iframe>');
+        $("#video-view").html('<iframe width="420" height="315" src="' + videoURL + '"></iframe>');
     }); 
 
 });
