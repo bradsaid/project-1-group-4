@@ -9,13 +9,11 @@
 }
 
 aside {
-    background: #ebebeb;
-    width: 33.3%;
+    width: 100%;
     height: 300px;
     padding: 20px;
-    float: right;
+    float: inherit;
     text-align: center;
-    overflow: scroll;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
