@@ -4,7 +4,6 @@ $("#add-destination").on("click", function(event) {
     var API_KEY = '9335517-b03c3ef104729c3975acac324';
     let image = $("#destination-input").val().trim();
     console.log(image)
-    var URL = "https://pixabay.com/api/?key="+API_KEY+"&q="+encodeURIComponent(image);
     var URL = "https://pixabay.com/api/?key="+API_KEY+"&q="+encodeURIComponent(image)
     + "&page_limit=15"
     + "&category=travel"
