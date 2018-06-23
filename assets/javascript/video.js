@@ -4,7 +4,7 @@ $("#add-destination").on("click", function(event) {
     var searchterm = $("#destination-input").val().trim();
     console.log(searchterm);
     var APIkey = "&key=AIzaSyD_xUzbIohfKHueav2f1FBmmq5DVo7KE-A";
-    var queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=" + searchterm + APIkey;
+    var queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=" + searchterm +" travel"+ APIkey;
 
     $.ajax({
         url: queryURL,
@@ -15,7 +15,7 @@ $("#add-destination").on("click", function(event) {
         console.log(videoID);
         var videoURL = "https://www.youtube.com/embed/" + videoID +"?autoplay=1";
         console.log(videoURL)
-        $("#video-view").html('<iframe width="420" height="315" src="' + videoURL + '"></iframe>');
+        $("#video-view").html('<br><br><br><br><br><iframe width=80% height="720px" src="' + videoURL + '"></iframe>');
     }); 
 
 });

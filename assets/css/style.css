@@ -14,10 +14,16 @@ h1, h2 {
 
 }
 
-#images-view, #video-view, #map-view {
+.output {
     width: 100%;
-    height: 300px;
     padding: 20px;
     float: initial;
     opacity: 0.9;
 }
+
+#images {
+    width: 200px;
+    height: 200px;
+    margin-right: 3px;
+    margin-bottom: 3px;
+ }
