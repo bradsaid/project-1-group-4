@@ -17,3 +17,7 @@ aside {
     opacity: 0.9;
 }
 
+#map-view {
+    height: 100%;
+    width: 75%;
+  }
