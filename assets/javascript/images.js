@@ -5,7 +5,7 @@ $("#add-destination").on("click", function(event) {
     let image = $("#destination-input").val().trim();
     console.log(image)
     var URL = "https://pixabay.com/api/?key="+API_KEY+"&q="+encodeURIComponent(image)
-    + "&page_limit=15"
+    + "&per_page=15"
     + "&category=travel"
     + "&image_type=photo";
     $.getJSON(URL, function(data){
