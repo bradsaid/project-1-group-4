@@ -1,14 +1,55 @@
+var map, infoWindow;
+var myposition;
 function initAutocomplete() {
-    var map = new google.maps.Map(document.getElementById('map-view'), {
-      center: {lat: -33.8688, lng: 151.2195},
-      zoom: 13,
-      mapTypeId: 'roadmap'
-    });
+  let map = new google.maps.Map(document.getElementById('map-view'), {
+    center: {lat: 29.760426700000004, lng: -95.3698028},
+    zoom: 13,
+    mapTypeId: 'roadmap'
+  });
+  infoWindow = new google.maps.InfoWindow;
+
+
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(function(position) {
+    var pos = {
+      lat: position.coords.latitude,
+      lng: position.coords.longitude
+    };
+    console.log(pos);
+    myposition=pos;
+    infoWindow.setPosition(pos);
+    infoWindow.setContent('you are here.');
+    infoWindow.open(map);
+    map.setCenter(pos);
+  }, function() {
+    handleLocationError(true, infoWindow, map.getCenter());
+  });
+} else {
+  // Browser doesn't support Geolocation
+  handleLocationError(false, infoWindow, map.getCenter());
+}
+
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+infoWindow.setPosition(pos);
+infoWindow.setContent(browserHasGeolocation ?
+                      'Error: The Geolocation service failed.' :
+                      'Error: Your browser doesn\'t support geolocation.');
+infoWindow.open(map);
+}
+
+
+// function initAutocomplete() {
+//     var map = new google.maps.Map(document.getElementById('map-view'), {
+//       center: {lat: -33.8688, lng: 151.2195},
+//       zoom: 13,
+//       mapTypeId: 'roadmap'
+//     });
 
     // Create the search box and link it to the UI element.
-    var input = document.getElementById('pac-input');
+    var input = document.getElementById('destination-input');
     var searchBox = new google.maps.places.SearchBox(input);
-    map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+    // map.controls[google.maps.ControlPosition.TOP_LEFT].push(input); 
+    map.controls.push();
 
     // Bias the SearchBox results towards current map's viewport.
     map.addListener('bounds_changed', function() {
