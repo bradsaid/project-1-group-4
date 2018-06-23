@@ -1,9 +1,9 @@
-var map, infoWindow;
-var myposition;
+let map, infoWindow;
+let myposition;
 function initAutocomplete() {
   let map = new google.maps.Map(document.getElementById('map-view'), {
     center: {lat: 29.760426700000004, lng: -95.3698028},
-    zoom: 13,
+    zoom: 12,
     mapTypeId: 'roadmap'
   });
   infoWindow = new google.maps.InfoWindow;
@@ -11,14 +11,14 @@ function initAutocomplete() {
 
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function(position) {
-    var pos = {
+    let pos = {
       lat: position.coords.latitude,
       lng: position.coords.longitude
     };
     console.log(pos);
     myposition=pos;
     infoWindow.setPosition(pos);
-    infoWindow.setContent('you are here.');
+    infoWindow.setContent('You\'re here.');
     infoWindow.open(map);
     map.setCenter(pos);
   }, function() {
@@ -46,8 +46,8 @@ infoWindow.open(map);
 //     });
 
     // Create the search box and link it to the UI element.
-    var input = document.getElementById('destination-input');
-    var searchBox = new google.maps.places.SearchBox(input);
+    let input = document.getElementById('destination-input');
+    let searchBox = new google.maps.places.SearchBox(input);
     // map.controls[google.maps.ControlPosition.TOP_LEFT].push(input); 
     map.controls.push();
 
@@ -56,11 +56,11 @@ infoWindow.open(map);
       searchBox.setBounds(map.getBounds());
     });
 
-    var markers = [];
+    let markers = [];
     // Listen for the event fired when the user selects a prediction and retrieve
     // more details for that place.
     searchBox.addListener('places_changed', function() {
-      var places = searchBox.getPlaces();
+      let places = searchBox.getPlaces();
 
       if (places.length == 0) {
         return;
@@ -73,13 +73,13 @@ infoWindow.open(map);
       markers = [];
 
       // For each place, get the icon, name and location.
-      var bounds = new google.maps.LatLngBounds();
+      let bounds = new google.maps.LatLngBounds();
       places.forEach(function(place) {
         if (!place.geometry) {
           console.log("Returned place contains no geometry");
           return;
         }
-        var icon = {
+        let icon = {
           url: place.icon,
           size: new google.maps.Size(71, 71),
           origin: new google.maps.Point(0, 0),
