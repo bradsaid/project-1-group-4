@@ -19,6 +19,7 @@ h1, h2 {
     padding: 20px;
     float: initial;
     opacity: 0.9;
+    text-align: center;
 }
 
 #images {
