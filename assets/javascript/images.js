@@ -5,10 +5,15 @@ $("#add-destination").on("click", function(event) {
     let image = $("#destination-input").val().trim();
     console.log(image)
     var URL = "https://pixabay.com/api/?key="+API_KEY+"&q="+encodeURIComponent(image);
+    var URL = "https://pixabay.com/api/?key="+API_KEY+"&q="+encodeURIComponent(image)
+    + "&page_limit=15"
+    + "&category=travel"
+    + "&image_type=photo";
     $.getJSON(URL, function(data){
         for (var i = 0; i < data.hits.length; i++) {
-            let url = data.hits[i].previewURL;
-            $("#images-view").append("<img src=" + url + ">");
+            let url = data.hits[i].webformatURL;
+            let id = "images"
+            $("#images-view").append("<img src=" + url + " id=" + id + ">");
         };
 });
 });
