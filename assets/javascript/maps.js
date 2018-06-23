@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // let map, infoWindow;
 // let myposition;
 // function initAutocomplete() {
@@ -29,38 +28,6 @@
 //   // Browser doesn't support Geolocation
 //   handleLocationError(false, infoWindow, map.getCenter());
 // }
-=======
-var map, infoWindow;
-var myposition;
-function initAutocomplete() {
-  let map = new google.maps.Map(document.getElementById('map-view'), {
-    center: {lat: 29.760426700000004, lng: -95.3698028},
-    zoom: 13,
-    mapTypeId: 'roadmap'
-  });
-  infoWindow = new google.maps.InfoWindow;
-
-
-if (navigator.geolocation) {
-  navigator.geolocation.getCurrentPosition(function(position) {
-    var pos = {
-      lat: position.coords.latitude,
-      lng: position.coords.longitude
-    };
-    console.log(pos);
-    myposition=pos;
-    infoWindow.setPosition(pos);
-    infoWindow.setContent('you are here.');
-    infoWindow.open(map);
-    map.setCenter(pos);
-  }, function() {
-    handleLocationError(true, infoWindow, map.getCenter());
-  });
-} else {
-  // Browser doesn't support Geolocation
-  handleLocationError(false, infoWindow, map.getCenter());
-}
->>>>>>> 697600d490c4049c057b540575c2a86a334dde27
 
 // function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 // infoWindow.setPosition(pos);
@@ -77,6 +44,8 @@ function initAutocomplete() {
       zoom: 15,
       mapTypeId: 'roadmap'
     });
+
+    console.log('hello');
 
     // Create the search box and link it to the UI element.
     var input = document.getElementById('destination-input');
