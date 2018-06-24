@@ -1,3 +1,12 @@
+$(document).ready(function(){
+  $('#map-view').hide();
+});
+
+
+$('#add-destination').click(function (){
+  $('#map-view').show();
+});
+
 
 function initAutocomplete() {
     var map = new google.maps.Map(document.getElementById('map-view'), {
@@ -66,5 +75,6 @@ function initAutocomplete() {
         }
       });
       map.fitBounds(bounds);
+      map.setZoom(11);
     });
 }
