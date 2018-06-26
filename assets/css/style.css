@@ -30,11 +30,15 @@ h1, h2 {
  }
 
  #map-view {
-    margin-left: 350px;
-    height: 400px;
-    width: 800px;
+    margin-left: 275px;
+    height: 600px;
+    width: 1000px;
     border-style: groove;
     border-color: gold;
     border-radius: 5px;
     margin-bottom: 15px;
 }
+
+/* #images:hover {
+    transform: scale(1.5);
+} */
