@@ -21,8 +21,7 @@ $("#add-destination").on("click", function(event) {
         for (var i = 0; i < data.hits.length; i++) {
             let url = data.hits[i].webformatURL;
             let id = "images";
-            let c = "images";
-            $("#images-view").append("<img src=" + url + " id=" + id + " "+ "class=" + c + ">");
+            $("#images-view").append("<a target=" + "_blank" + " href=" + url + "><img src=" + url + " id=" + id + "></a>");
         };
     hasImages();
 });
