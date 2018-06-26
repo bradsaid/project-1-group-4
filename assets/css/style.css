@@ -19,6 +19,7 @@ h1, h2 {
     padding: 20px;
     float: initial;
     opacity: 0.9;
+    text-align: center;
 }
 
 #images {
@@ -27,3 +28,13 @@ h1, h2 {
     margin-right: 3px;
     margin-bottom: 3px;
  }
+
+ #map-view {
+    margin-left: 350px;
+    height: 400px;
+    width: 800px;
+    border-style: groove;
+    border-color: gold;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
