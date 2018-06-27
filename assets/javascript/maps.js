@@ -19,15 +19,12 @@ function initAutocomplete() {
     // Create the search box and link it to the UI element.
     var input = document.getElementById('destination-input');
     var searchBox = new google.maps.places.SearchBox(input);
-    // map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
     map.controls.push();
 
     // Bias the SearchBox results towards current map's viewport.
     map.addListener('bounds_changed', function() {
       searchBox.setBounds(map.getBounds());
     });
-
-
 
     var markers = [];
     // Listen for the event fired when the user selects a prediction and retrieve
@@ -60,13 +57,18 @@ function initAutocomplete() {
           scaledSize: new google.maps.Size(25, 25)
         };
 
-        // Create a marker for each place.
-        markers.push(new google.maps.Marker({
-          map: map,
-          icon: icon,
-          title: place.name,
-          position: place.geometry.location,
-        }));
+        var marker = new google.maps.Marker({
+          map: map, 
+          draggable: true, 
+          position: place.geometry.location
+        });
+
+        let loc = new google.maps.LatLng(marker.position.lat(), marker.position.lng());
+        bounds.extend(loc);
+
+        map.fitBounds(bounds);
+        map.panToBounds(bounds);
+
 
         if (place.geometry.viewport) {
           // Only geocodes have viewport.
@@ -75,7 +77,10 @@ function initAutocomplete() {
           bounds.extend(place.geometry.location);
         }
       });
-      map.fitBounds(bounds);
       map.setZoom(13);
+  
+    
     });
+
+    
 }
