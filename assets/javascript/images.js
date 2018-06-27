@@ -47,7 +47,8 @@ $("#add-destination").on("click", function(event) {
                 + " href=" + siteURL + ">"
                 + "<img src=https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Seal_of_the_United_States_Department_of_State.svg/1024px-Seal_of_the_United_States_Department_of_State.svg.png"
                 + " style=" + "width:100px;height:100px;>"
-                + "<a href=" 
+                + "<a target=" + "_blank"
+                + " href=" 
                 + siteURL 
                 + ">State Department Fact Sheet: " 
                 + country 
