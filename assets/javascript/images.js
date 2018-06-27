@@ -20,11 +20,10 @@ $("#add-destination").on("click", function(event) {
         for (var i = 0; i < data.hits.length; i++) {
             let url = data.hits[i].webformatURL;
             let id = "images";
-            $("#images-view").append("<a target=" 
-            + "_blank" 
+            $("#images-view").append("<a " 
             + " href=" 
             + url 
-            + "><img src=" 
+            + " data-fancybox='images'><img src=" 
             + url 
             + " id=" 
             + id 
