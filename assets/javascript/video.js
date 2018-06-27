@@ -8,7 +8,6 @@ $("#add-destination").on("click", function(event) {
         head.style.top = "0";
         head.style.opacity = "0.7";
     var jumbo = document.getElementById("jumbo");
-        jumbo.style.height = '190px';
         jumbo.style.padding = '0px';
         
     // API
@@ -28,5 +27,4 @@ $("#add-destination").on("click", function(event) {
         console.log(videoURL)
         $("#video-view").html('<iframe width=80% height="720px" src="' + videoURL + '"></iframe>');
     }); 
-
 });
