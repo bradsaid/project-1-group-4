@@ -41,6 +41,7 @@ $("#add-destination").on("click", function(event) {
         for (var a = 0; a < response.country_fact_sheets.length; a++) {
             let siteURL = response.country_fact_sheets[a].site_url;
             console.log(siteURL);
+            $("#fact-sheet-view").empty();
             $("#fact-sheet-view").append(
                 "<a target=" + "_blank"
                 + " href=" + siteURL + ">"
