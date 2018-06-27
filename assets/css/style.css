@@ -30,15 +30,22 @@ h1, h2 {
  }
 
  #map-view {
-    margin-left: 275px;
-    height: 600px;
-    width: 1000px;
+    overflow: hidden;
+    margin-left: 165px;
+    height: 60%;
+    width: 80%;
     border-style: groove;
     border-color: gold;
     border-radius: 5px;
     margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
 }
 
-/* #images:hover {
-    transform: scale(1.5);
-} */
+#map-view iframe{
+    left:0;
+    top:0;
+    height:600px;
+    width:80%;
+    position:absolute;
+}
