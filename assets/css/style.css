@@ -2,29 +2,33 @@
     background-color: #616161;
     padding-top: 50px;
     padding-bottom: 50px;
-    height: 290px;
     opacity: .95;
 }
-
+.header {
+    position: fixed;  
+    top: 20%; 
+    width: 100%; 
+    z-index: 5;
+}
+.main {
+    margin-top: 200px; 
+}
 h1 {
     text-align: center;
     color: white;
     font-size: 80px;
     font-family: 'Shadows Into Light', cursive;
 }
-
 h2 {
     text-align: center;
     color: white;
     font-family: 'Amatic SC', cursive;
 }
-
 h3 {
     text-align: center;
     color: #ff9999;
     font-family: 'Amatic SC', cursive;
 }
-
 .output {
     width: 100%;
     padding: 20px;
@@ -32,14 +36,12 @@ h3 {
     opacity: 0.95;
     text-align: center;
 }
-
 #images {
     width: 200px;
     height: 200px;
     margin-right: 3px;
     margin-bottom: 3px;
 }
-
 #map-view {
     overflow: hidden;
     margin-left: 165px;
@@ -52,7 +54,6 @@ h3 {
     position: relative;
     padding: 200px;
 }
-
 #map-view iframe{
     left:0;
     top:0;
@@ -61,16 +62,3 @@ h3 {
     padding: 200px;
     position:absolute;
 }
-
-.header {
-    padding: 10px 16px;
-    position: fixed;  
-    top: 200px; 
-    width: 100%; 
-    z-index: 5;
-}
-
-.main {
-    margin-top: 200px; 
-}
-
