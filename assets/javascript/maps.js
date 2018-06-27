@@ -19,13 +19,14 @@ function initAutocomplete() {
     // Create the search box and link it to the UI element.
     var input = document.getElementById('destination-input');
     var searchBox = new google.maps.places.SearchBox(input);
-    // map.controls[google.maps.ControlPosition.TOP_LEFT].push(input); 
+    // map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
     map.controls.push();
 
     // Bias the SearchBox results towards current map's viewport.
     map.addListener('bounds_changed', function() {
       searchBox.setBounds(map.getBounds());
     });
+
 
 
     var markers = [];
@@ -64,7 +65,7 @@ function initAutocomplete() {
           map: map,
           icon: icon,
           title: place.name,
-          position: place.geometry.location
+          position: place.geometry.location,
         }));
 
         if (place.geometry.viewport) {
@@ -75,6 +76,6 @@ function initAutocomplete() {
         }
       });
       map.fitBounds(bounds);
-      map.setZoom(11);
+      map.setZoom(13);
     });
 }
