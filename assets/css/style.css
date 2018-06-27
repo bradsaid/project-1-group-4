@@ -1,9 +1,9 @@
 .jumbotron {
     background-color: #616161;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    height: 190px;
-    opacity: 0.85;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: 290px;
+    opacity: .95;
 }
 
 h1 {
@@ -13,13 +13,13 @@ h1 {
     font-family: 'Shadows Into Light', cursive;
 }
 
-h2{
+h2 {
     text-align: center;
     color: white;
     font-family: 'Amatic SC', cursive;
 }
 
-h3{
+h3 {
     text-align: center;
     color: #ff9999;
     font-family: 'Amatic SC', cursive;
@@ -29,7 +29,7 @@ h3{
     width: 100%;
     padding: 20px;
     float: initial;
-    opacity: 0.9;
+    opacity: 0.95;
     text-align: center;
 }
 
@@ -40,7 +40,7 @@ h3{
     margin-bottom: 3px;
 }
 
- #map-view {
+#map-view {
     overflow: hidden;
     margin-left: 165px;
     height: 60%;
@@ -60,3 +60,16 @@ h3{
     width:80%;
     position:absolute;
 }
+
+.header {
+    padding: 10px 16px;
+    position: fixed;  
+    top: 200px; 
+    width: 100%; 
+    z-index: 5;
+}
+
+.main {
+    margin-top: 200px; 
+}
+

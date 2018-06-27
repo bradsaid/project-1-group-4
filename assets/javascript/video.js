@@ -1,6 +1,17 @@
 // YOUTUBE API
 $("#add-destination").on("click", function(event) {
     event.preventDefault();
+    
+    // FIX HEADER CSS
+    var head = document.getElementById("container");
+        head.style.position = "fixed";
+        head.style.top = "0";
+        head.style.opacity = "0.7";
+    var jumbo = document.getElementById("jumbo");
+        jumbo.style.height = '190px';
+        jumbo.style.padding = '0px';
+        
+    // API
     var searchterm = $("#destination-input").val().trim();
     console.log(searchterm);
     var APIkey = "&key=AIzaSyD_xUzbIohfKHueav2f1FBmmq5DVo7KE-A";
@@ -15,7 +26,7 @@ $("#add-destination").on("click", function(event) {
         console.log(videoID);
         var videoURL = "https://www.youtube.com/embed/" + videoID +"?autoplay=1";
         console.log(videoURL)
-        $("#video-view").html('<br><br><br><br><br><iframe width=80% height="720px" src="' + videoURL + '"></iframe>');
+        $("#video-view").html('<iframe width=80% height="720px" src="' + videoURL + '"></iframe>');
     }); 
 
 });
