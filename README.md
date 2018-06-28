@@ -12,7 +12,7 @@ Search for images and videos based on a destination.
 1. Using YouTube API we get "travel guide" videos relative to the search criteria.
 1. Using Google Maps API, display the search value on a map.
 1. Using US State Department API to link to destination fact sheet.  
-1. Using Parallax.js, Fancybox.js & Bootstrap for styling effects.  
+1. Using Fancybox.js & Bootstrap for styling effects.  
 
 
 BONUS API's - FUTURE & WISHLIST
