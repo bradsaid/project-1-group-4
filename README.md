@@ -1,5 +1,7 @@
 # VACATION RESEARCH
 
+https://bradsaid.github.io/project-1-group-4/
+
 * Git Master: Brad Said
 * Project Manager: Brian Phan
 
